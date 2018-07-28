@@ -25,8 +25,8 @@
 <div id="app">
     <g-button icon="config" icon-position="right" >右边</g-button>
     <g-button icon="config" icon-position="left" >左边</g-button>
-    <g-button icon="config">左边</g-button>
-    <g-button icon="loading">loading</g-button>
+    <g-button icon="loading" :loading="loading1" icon-position="right" @click="loading1 = !loading1">loading</g-button>
+    <g-button icon="config" :loading="true" >loading</g-button>
     <g-button>无icon</g-button>
 </div>
 <script src="http://at.alicdn.com/t/font_766758_jnnumi26cei.js"></script>
