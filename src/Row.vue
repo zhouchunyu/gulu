@@ -11,5 +11,6 @@
 <style>
     .row {
         display: flex;
+        margin: 0 -10px;
     }
 </style>

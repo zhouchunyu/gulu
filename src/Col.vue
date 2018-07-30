@@ -1,6 +1,8 @@
 <template>
     <div class="col" :class="[span && `col-${span}`, offset && `offset-${offset}`]">
-        <slot></slot>
+        <div style="border: 1px solid black">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -20,9 +22,9 @@
 <style scoped lang="scss">
     .col{
         height: 100px;
-        background: grey;
         border: 1px solid red;
         width: 50%;
+        padding: 0 10px;
     }
 
     $class-prefix: col-;

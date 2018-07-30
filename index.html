@@ -20,33 +20,42 @@
 
         }
     </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
-    <g-row>
-        <g-col>默认55开</g-col>
-        <g-col>默认55开</g-col>
-    </g-row>
-    <g-row>
-        <g-col>默认55开</g-col>
-        <g-col>默认55开</g-col>
-        <g-col>默认55开</g-col>
-    </g-row>
-    <div class="row">
-        <g-col span="2">2</g-col>
-        <g-col span="2">2</g-col>
-        <g-col span="20">20</g-col>
+    <div>布局组件</div>
+    <div style="border: 1px solid blue">
+        <g-row>
+            <g-col>默认55开</g-col>
+            <g-col>默认55开</g-col>
+        </g-row>
+        <g-row>
+            <g-col>默认55开</g-col>
+            <g-col>默认55开</g-col>
+            <g-col>默认55开</g-col>
+        </g-row>
+        <g-row class="row">
+            <g-col span="2">2</g-col>
+            <g-col span="18" offset="4">18</g-col>
+        </g-row>
+        <g-row class="row">
+            <g-col span="2">2</g-col>
+            <g-col span="2">2</g-col>
+            <g-col span="20">20</g-col>
+        </g-row>
     </div>
-    <div class="row">
-        <g-col span="2">2</g-col>
-        <g-col span="20" offset="2">20</g-col>
-    </div>
-
     <br>
+    <div>input 组件</div>
     <g-input value="张三"></g-input>
     <g-input value="李四"></g-input>
     <g-input value="disabled" disabled></g-input>
-    <g-input value="disabled" readonly> readonly</g-input>
+    <g-input value="readonly" readonly> readonly</g-input>
     <g-input value="很短" error="名字太短了"></g-input>
     <br>
     <br>
@@ -59,7 +68,6 @@
 </div>
 <br>
 <br>
-<div>组件测试</div>
 <div id="test">
 </div>
 <script src="http://at.alicdn.com/t/font_766758_jnnumi26cei.js"></script>
