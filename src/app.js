@@ -14,3 +14,17 @@ new Vue({
         loading1: false
     }
 })
+
+import chai from 'chai';
+
+const expect = chai.expect;
+// 单元测试
+{
+    const Constructor = Vue.extend(Button);
+    const button = new Constructor({
+        propsData: {icon: 'config'}
+    });
+    button.$mount('#test')
+    const useElement = button.$el.querySelector('use');
+    expect(useElement.getAttribute('xlink:href')).to.eq('#icon-config');
+}
