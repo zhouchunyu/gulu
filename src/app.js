@@ -22,9 +22,27 @@ const expect = chai.expect;
 {
     const Constructor = Vue.extend(Button);
     const button = new Constructor({
-        propsData: {icon: 'config'}
+        propsData: {
+            icon: 'config',
+            loading: true
+        }
+    });
+    button.$mount()
+    const useElement = button.$el.querySelector('use');
+    expect(useElement.getAttribute('xlink:href')).to.eq('#icon-loading');
+}
+{
+    const Constructor = Vue.extend(Button);
+    const button = new Constructor({
+        propsData: {
+            icon: 'config',
+            loading: true,
+            iconPosition: 'right'
+        }
     });
     button.$mount('#test')
-    const useElement = button.$el.querySelector('use');
-    expect(useElement.getAttribute('xlink:href')).to.eq('#icon-config');
+    const svg = button.$el.querySelector('svg');
+    let {order} = window.getComputedStyle(svg);
+    expect(order).to.eq('2');
 }
+
